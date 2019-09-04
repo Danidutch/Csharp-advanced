@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Abstractclass.cs
+{
+    public abstract class Shapes
+    {
+
+        public abstract void PrintMe();
+    }
+
+    public class Circle : Shapes {
+
+        public override void PrintMe()
+        {
+            Console.WriteLine("It's Circle");
+        }
+
+    }
+    public class Rect: Shapes 
+    {
+        public override void PrintMe()
+        {
+            Console.WriteLine("It's Rectangle");
+        }
+        }
+     class MyClass
+    {  
+        static void Main()
+
+        {
+        Circle crl = new Circle();
+        crl.PrintMe();
+        Rect rc = new Rect();
+        rc.PrintMe();
+        Console.ReadLine();           
+            }
+    }
