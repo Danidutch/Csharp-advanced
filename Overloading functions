@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Overloadingfunctions.cs
+{
+    class Shapes {
+
+        public double PrintShapes(double widhts, double heights)
+        {
+            return widhts * heights;
+        }
+        public float PrintShapes(float heights)
+        {
+            return heights* heights;
+
+        }
+
+        public double PrintShapes(double radius)
+        {
+            return Math.PI* radius* radius;
+           }
+
+        }
+        static void  Main ()
+        {
+            Shapes sh = new Shapes();
+            Console.WriteLine("Rectangle Area is:" +sh.PrintShapes(1.5, 2.5));
+            Console.WriteLine("Square Area is :" + sh.PrintShapes(1.5f));
+            Console.WriteLine("Circle Area is:" + sh.PrintShapes(1.5));
+            Console.ReadLine();
+
+        }
+    }
+
